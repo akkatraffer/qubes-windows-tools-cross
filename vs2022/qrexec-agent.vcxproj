@@ -68,6 +68,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>shlwapi.lib;wtsapi32.lib;wsock32.lib;iphlpapi.lib;setupapi.lib;ole32.lib;comctl32.lib;rpcrt4.lib;uuid.lib;ntdll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>cd $(SolutionDir)..\qubes-core-agent-windows
+call set_version.bat &amp;&amp; powershell -executionpolicy bypass -File ./set_version.ps1 &lt; nul
+</Command>
+    </PreBuildEvent>
     <ResourceCompile>
       <AdditionalIncludeDirectories>$(SolutionDir)\..\qubes-core-qubesdb/include</AdditionalIncludeDirectories>
     </ResourceCompile>
@@ -91,6 +96,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>shlwapi.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>cd $(SolutionDir)..\qubes-core-agent-windows
+call set_version.bat &amp;&amp; powershell -executionpolicy bypass -File ./set_version.ps1 &lt; nul
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\qubes-core-agent-windows/src/qrexec-agent/qrexec-agent.c" />

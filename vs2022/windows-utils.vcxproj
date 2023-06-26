@@ -74,8 +74,7 @@
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
     </ProjectReference>
     <PreBuildEvent>
-      <Command>
-cd $(SolutionDir)..\qubes-windows-utils
+      <Command>cd $(SolutionDir)..\qubes-windows-utils
 call set_version.bat &amp;&amp; powershell -executionpolicy bypass -File ./set_version.ps1 &lt; nul
 </Command>
     </PreBuildEvent>
@@ -97,6 +96,11 @@ call set_version.bat &amp;&amp; powershell -executionpolicy bypass -File ./set_v
       <AdditionalDependencies>ws2_32.lib;shlwapi.lib;wtsapi32.lib;userenv.lib;version.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
+    <PreBuildEvent>
+      <Command>cd $(SolutionDir)..\qubes-windows-utils
+call set_version.bat &amp;&amp; powershell -executionpolicy bypass -File ./set_version.ps1 &lt; nul
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\qubes-windows-utils\src\buffer.c" />

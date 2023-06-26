@@ -72,8 +72,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)\..\qubes-core-vchan-xen\windows\src</AdditionalIncludeDirectories>
     </ResourceCompile>
     <PreBuildEvent>
-      <Command>
-cd $(SolutionDir)..\qubes-core-vchan-xen\windows
+      <Command>cd $(SolutionDir)..\qubes-core-vchan-xen\windows
 call set_version.bat &amp;&amp; powershell -executionpolicy bypass -File ./set_version.ps1 &lt; nul
 </Command>
     </PreBuildEvent>
@@ -94,6 +93,11 @@ call set_version.bat &amp;&amp; powershell -executionpolicy bypass -File ./set_v
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
+    <PreBuildEvent>
+      <Command>cd $(SolutionDir)..\qubes-core-vchan-xen\windows
+call set_version.bat &amp;&amp; powershell -executionpolicy bypass -File ./set_version.ps1 &lt; nul
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\qubes-core-vchan-xen\windows\src\dllmain.c" />

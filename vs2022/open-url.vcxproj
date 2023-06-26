@@ -70,12 +70,6 @@
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
     </ProjectReference>
-    <PreBuildEvent>
-      <Command>
-cd $(SolutionDir)..\qubes-core-agent-windows
-call set_version.bat &amp;&amp; powershell -executionpolicy bypass -File ./set_version.ps1 &lt; nul
-</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
