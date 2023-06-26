@@ -22,8 +22,9 @@
 	url = https://github.com/QubesOS/qubes-installer-qubes-os-windows-tools
 [submodule "qubes-vmm-xen-windows-pvdrivers"]
 	path = qubes-vmm-xen-windows-pvdrivers
-	url = https://github.com/QubesOS/qubes-vmm-xen-windows-pvdrivers
+	url = https://github.com/omeg/qubes-vmm-xen-windows-pvdrivers
+	branch = omeg/win10
 [submodule "qubes-vmm-xen-win-pvdrivers-xeniface"]
 	path = qubes-vmm-xen-win-pvdrivers-xeniface
-	url = https://github.com/QubesOS/qubes-vmm-xen-win-pvdrivers-xeniface
-	branch = upstream-xencontrol-win7
+	url = https://github.com/omeg/xeniface
+	branch = omeg/win10
