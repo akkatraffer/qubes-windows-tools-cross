@@ -1,7 +1,7 @@
 # Windows 10 setup (EXPERIMENTAL)
 
 - There's no installer or builder integration yet, so building and installing has to be done manually. Building requires Visual Studio 2022.
-- `git clone --recurse-submodules -b omeg/win10 https://github.com/omeg/qubes-windows-tools-cross`
+- `git clone --recurse-submodules https://github.com/akkatraffer/qubes-windows-tools-cross`
 - Open `vs2022/qubes-windows-tools-cross.sln` with VS.
 - Build the release config of the solution, output is in `vs2022/x64` (there's no 32bit version anymore).
 - Build `xenbus` and `xeniface` from `qubes-vmm-xen-windows-pvdrivers`:
