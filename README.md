@@ -101,7 +101,7 @@ make BUILDERCONF=example-configs/qubes-os-master.conf COMPONENTS=builder-rpm get
 ```
 2. Get QWT sources and extra binaries
 ```
-make BUILDERCONF=example-configs/qubes-os-master.conf BASEURL=https://github.com GIT_PREFIX=tabit-pro/qubes- INSECURE_SKIP_CHECKING=windows-tools-cross COMPONENTS=windows-tools-cross get-sources
+make BUILDERCONF=example-configs/qubes-os-master.conf BASEURL=https://github.com GIT_PREFIX=akkatraffer/qubes- INSECURE_SKIP_CHECKING=windows-tools-cross COMPONENTS=windows-tools-cross get-sources
 ```
 3. Build QWT iso
 ```
