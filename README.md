@@ -93,7 +93,7 @@ Here is short how-to instructions to build using disposable VM in Qubes R4.1 pre
 ```
 cd ~
 sudo dnf -y install git make mock
-git clone https://github.com/QubesOS/qubes-builder
+git clone https://github.com/akkatraffer/qubes-builder
 cd qubes-builder
 make install-deps
 make remount
